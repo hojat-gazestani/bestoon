@@ -2,10 +2,11 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from djnago.contrib.auth.models import User
+from django.contrib.auth.models import User
+
 # Create your models here.
 class Expense(models.Model):
-    text = models.CharField(man_lengh=255)
+    text = models.CharField(max_length=255)
     date = models.DateTimeField()
-    amout = models.BigIntergerField()
-    user = models.ForeignKey(User) 
+    amount = models.BigIntegerField()
+    user = models.ForeignKey(User)
